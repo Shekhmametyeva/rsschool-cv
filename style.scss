@@ -85,7 +85,6 @@ li {
     text-align: center;
     letter-spacing: 0.1rem;
     @media (max-width: 768px) {
-        font-size: 2rem;
         padding-bottom: 30px;
     }
 }
@@ -287,4 +286,31 @@ li {
         font-size: 1.5rem;
         font-weight: 400;
     }
+}
+.code {
+    &__container {
+        background-color: $color-grey-l;
+        padding: 30px;
+        @include flex();
+        flex-direction: column;
+        border-radius: 10px;
+    }
+    &__text {
+        font-size: 1.3rem;
+        padding-bottom: 30px;
+        text-align: center;
+        
+    }
+    pre {
+        font-size: 1.2rem;
+        color: $color-blue;
+        span {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            span {
+                display: inline;
+            }
+        }
+    }   
 }

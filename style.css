@@ -90,7 +90,6 @@ li {
 }
 @media (max-width: 768px) {
   .title {
-    font-size: 2rem;
     padding-bottom: 30px;
   }
 }
@@ -334,4 +333,31 @@ li {
 .skills__title {
   font-size: 1.5rem;
   font-weight: 400;
+}
+
+.code__container {
+  background-color: #e6e5e5;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.code__text {
+  font-size: 1.3rem;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.code pre {
+  font-size: 1.2rem;
+  color: #3c3cd1;
+}
+.code pre span {
+  display: none;
+}
+@media (max-width: 768px) {
+  .code pre span {
+    display: inline;
+  }
 }/*# sourceMappingURL=style.css.map */
