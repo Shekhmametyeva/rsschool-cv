@@ -21,7 +21,7 @@ function toggleMenu (event) {
 }
 function removeMenu (event) {
     if (!isMenuOpen) { return }
-    if (event.target.className === 'link' || event.target === wraperDark) { toggleMenu () }
+    if (event.target.className === 'nav__link' || event.target === wraperDark) { toggleMenu () }
      
 }
 
@@ -37,4 +37,22 @@ function animateProgressBar () {
        window.removeEventListener('scroll', animateProgressBar);
    }
 
+}
+
+// кнопка-лифт
+const scrollTop = document.querySelector('.scroll-top');
+window.addEventListener('scroll', addScrollTop);
+scrollTop.addEventListener('click', liftUp)
+
+
+function addScrollTop () {
+    if (document.documentElement.clientHeight < document.documentElement.scrollTop) {
+        scrollTop.classList.add('active')
+    } else {
+        scrollTop.classList.remove('active')
+    }
+}
+
+function liftUp () {
+    document.documentElement.scrollTo(0, 0);
 }

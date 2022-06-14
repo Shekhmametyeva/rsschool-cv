@@ -58,28 +58,6 @@ li {
   }
 }
 
-.link {
-  font-size: 1.5rem;
-  transition: all 0.2s linear;
-}
-.link::after {
-  content: "";
-  width: 100%;
-  height: 1.5px;
-  margin-top: 5px;
-}
-.link:hover {
-  transform: scale(110%);
-}
-.link:hover::after {
-  background-color: #3c3cd1;
-}
-@media (max-width: 768px) {
-  .link {
-    font-size: 1.8rem;
-  }
-}
-
 .title {
   position: relative;
   padding-bottom: 50px;
@@ -138,13 +116,6 @@ li {
 .header .nav {
   transition: all 0.5s linear;
 }
-.header .nav__list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-content: space-between;
-  gap: 20px;
-}
 @media (max-width: 768px) {
   .header .nav {
     width: 80vw;
@@ -161,10 +132,44 @@ li {
   .header .nav_open {
     right: 0;
   }
+}
+.header .nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 768px) {
   .header .nav__list {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+  }
+}
+.header .nav__item {
+  transition: all 0.2s linear;
+}
+.header .nav__item:hover {
+  transform: scale(110%);
+}
+.header .nav__item:hover::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  margin-top: 5px;
+  background-color: #3c3cd1;
+}
+.header .nav__link {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+@media (max-width: 768px) {
+  .header .nav__link {
+    font-size: 2rem;
   }
 }
 .header .hamburger {
@@ -568,5 +573,41 @@ li {
 @media (max-width: 429px) {
   .footer__text {
     order: 3;
+  }
+}
+
+.scroll-top {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 10px;
+  bottom: 50px;
+  background-color: #cecece;
+  border-radius: 100%;
+  cursor: pointer;
+  display: none;
+}
+.scroll-top:hover {
+  background-color: rgba(60, 60, 209, 0.4274509804);
+}
+.scroll-top.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1024px) {
+  .scroll-top {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .scroll-top {
+    width: 40px;
+    height: 40px;
+  }
+  .scroll-top img {
+    width: 16px;
+    height: 16px;
   }
 }/*# sourceMappingURL=style.css.map */

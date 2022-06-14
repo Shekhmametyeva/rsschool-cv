@@ -58,25 +58,6 @@ li {
         display: block;
     }
 }
-.link {
-    font-size: 1.5rem;
-    transition: all 0.2s linear;
-    &::after {
-        content: '';
-        width: 100%;
-        height: 1.5px;
-        margin-top: 5px;
-    }
-    &:hover {
-        transform: scale(110%);
-        &::after {
-            background-color: $color-blue;
-        } 
-    }
-    @media (max-width: 768px) {
-        font-size: 1.8rem;
-    }
-}
 .title {
     position: relative;
     padding-bottom: 50px;
@@ -122,11 +103,6 @@ li {
     border-bottom: 2px solid $color-blue;
     .nav {
         transition: all 0.5s linear;
-        &__list {
-            @include flex();
-            justify-content: space-between;
-            gap: 20px;
-        }
         @media (max-width: 768px) {
             width: 80vw;
             height: 100vh;
@@ -138,11 +114,39 @@ li {
             @include flex();
             &_open {
                 right: 0;
-            }
-            &__list {
+            }   
+        }
+        &__list {
+            @include flex();
+            justify-content: space-between;
+            gap: 20px;
+            @media (max-width: 768px) {
                 flex-direction: column;
                 align-items: center;
                 gap: 30px;
+            }
+        }
+        &__item {
+            transition: all 0.2s linear;
+            &:hover {
+                transform: scale(110%);
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    height: 1.5px;
+                    margin-top: 5px;
+                    background-color: $color-blue;
+                }
+            } 
+        }
+        &__link {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            @media (max-width: 768px) {
+                font-size: 2rem;
             }
         }
     }
@@ -496,6 +500,35 @@ li {
         @media (max-width: 429px) {
             order: 3;
             
+        }
+    }
+}
+.scroll-top {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+    background-color: $color-grey-xl;
+    border-radius: 100%;
+    cursor: pointer;
+    display: none;
+    &:hover {
+        background-color: $color-blue-ligth;
+    }
+    &.active {
+        @include flex();
+    } 
+    @media (max-width: 1024px) {
+        width: 50px;
+        height: 50px;
+    }
+    @media (max-width: 767px) {
+        width: 40px;
+        height: 40px;
+        img {
+            width: 16px;
+            height: 16px;  
         }
     }
 }
