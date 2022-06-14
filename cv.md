@@ -1,5 +1,6 @@
 # Alina Shekhmametyeva 
 *****
+![photo](assets/images/photo.jpg "photo")
 
 ## Contacts
 * **E-mail:** alina-r-s98@outlook.com
