@@ -545,4 +545,28 @@ li {
 }
 .contacts__item:hover span {
   color: #3c3cd1;
+}
+
+.footer {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.footer__icon {
+  transition: all 0.2s linear;
+}
+.footer__icon:hover {
+  transform: scale(110%);
+}
+.footer__text {
+  padding: 0 10px;
+  text-align: center;
+}
+@media (max-width: 429px) {
+  .footer__text {
+    order: 3;
+  }
 }/*# sourceMappingURL=style.css.map */

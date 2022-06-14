@@ -479,3 +479,23 @@ li {
         }
     }
 }
+.footer {
+    height: 90px;
+    @include flex();
+    justify-content: space-around;
+    flex-wrap: wrap;
+    &__icon {
+        transition: all 0.2s linear;
+        &:hover {
+            transform: scale(110%);
+        }
+    }
+    &__text {
+        padding: 0 10px;
+        text-align: center;
+        @media (max-width: 429px) {
+            order: 3;
+            
+        }
+    }
+}
