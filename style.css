@@ -505,4 +505,44 @@ li {
   .project__description svg {
     width: 30px;
   }
+}
+
+.contacts__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contacts__item {
+  padding: 7px 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.contacts__item::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #3c3cd1;
+  transition: all 0.2s linear;
+}
+.contacts__item:hover::after {
+  width: 100%;
+}
+.contacts__item span {
+  font-weight: 600;
+}
+@media (max-width: 500px) {
+  .contacts__item span {
+    display: block;
+  }
+}
+.contacts__item:hover span {
+  color: #3c3cd1;
 }/*# sourceMappingURL=style.css.map */
