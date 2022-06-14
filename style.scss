@@ -20,6 +20,9 @@ html {
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: $color-grey;
     scroll-behavior: smooth;
+    @media (max-width: 1024px) {
+        font-size: 14px; 
+    }
 }
 a {
     text-decoration: none;
@@ -72,6 +75,33 @@ li {
     }
     @media (max-width: 768px) {
         font-size: 1.8rem;
+    }
+}
+.section {
+    padding: 50px 0;
+    border-bottom: 2px solid $color-blue;
+    @media (max-width: 768px) {
+        padding: 30px 0;
+    }
+}
+.button {
+    width: 200px;
+    height: 50px;
+    @include flex();
+    font-size: 1.3rem;
+    color: $color-blue;
+    border: 2px solid $color-blue;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    &:hover {
+        transform: translate(5px, 5px);
+        box-shadow: -5px -5px 5px $color-blue;
+    }
+}
+@media (max-width: 768px) {
+    body.hidden {
+      overflow: hidden;
     }
 }
 .header {
@@ -129,6 +159,61 @@ li {
             &_open {
                 transform: rotate(90deg);
             }
+        }
+    }
+}
+.summary {
+    @include flex();
+    gap: 5%;
+    @media (max-width: 1024px) {
+        gap: 30px;
+    }
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    &__img {
+        border-radius: 10px;
+        @media (max-width: 1024px) {
+            width: 300px;
+        }
+        @media (max-width: 768px) {
+            width: 200px;
+        }
+    }
+    &__container {
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        @media (max-width: 1024px) {
+            gap: 20px;
+        }
+        @media (max-width: 768px) {
+            align-items: center;
+        }
+    }    
+    &__title {
+        font-size: 3rem;
+        font-weight: 500;
+        @media (max-width: 768px) {
+            font-size: 2.3rem;
+        }
+    }
+    &__subtitle {
+        font-size: 2rem;
+        font-weight: 500;
+        color: $color-blue;
+    }  
+    &__text {
+        font-family: Arial, Helvetica, sans-serif;
+        padding-bottom: 10px;
+        text-align: justify;
+        @media (max-width: 768px) {
+            text-align: center;
         }
     }
 }
