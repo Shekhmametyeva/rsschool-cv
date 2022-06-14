@@ -314,3 +314,49 @@ li {
         }
     }   
 }
+.education {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+    &__item {
+        @include flex();
+        justify-content: space-between;
+        border-bottom: 2px solid $color-grey-xl;
+        text-align: center;
+        font-size: 1.3rem;
+        &__first {
+            border-top: 2px solid $color-grey-xl;  
+        }
+        &:hover {
+            background-color: $color-grey-l;
+            & .education__link {
+                color: $color-blue;
+            }
+        }
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 5px;
+            padding: 10px 0;
+        }
+    }
+    &__years {
+        width: 180px;
+    }
+    &__direction {
+        width: 280px;
+    }
+    &__link {
+        width: 250px;
+        padding: 20px 0;
+        transition: all 0.2s linear;
+        &:hover {
+            transform: scale(108%);
+        }
+        @media (max-width: 768px) {
+            padding: 0;
+        }
+    }    
+}

@@ -360,4 +360,55 @@ li {
   .code pre span {
     display: inline;
   }
+}
+
+.education__container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+.education__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #cecece;
+  text-align: center;
+  font-size: 1.3rem;
+}
+.education__item__first {
+  border-top: 2px solid #cecece;
+}
+.education__item:hover {
+  background-color: #e6e5e5;
+}
+.education__item:hover .education__link {
+  color: #3c3cd1;
+}
+@media (max-width: 768px) {
+  .education__item {
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 0;
+  }
+}
+.education__years {
+  width: 180px;
+}
+.education__direction {
+  width: 280px;
+}
+.education__link {
+  width: 250px;
+  padding: 20px 0;
+  transition: all 0.2s linear;
+}
+.education__link:hover {
+  transform: scale(108%);
+}
+@media (max-width: 768px) {
+  .education__link {
+    padding: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
