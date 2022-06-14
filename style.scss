@@ -360,3 +360,19 @@ li {
         }
     }    
 }
+.english {
+    &__container {
+        @include flex();
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    &__text {
+        font-size: 1.8rem;
+        font-weight: 400;
+        span {
+            color: $color-blue;
+            font-size: 2rem;
+        }
+    }
+}

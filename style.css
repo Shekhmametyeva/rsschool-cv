@@ -411,4 +411,21 @@ li {
   .education__link {
     padding: 0;
   }
+}
+
+.english__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.english__text {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.english__text span {
+  color: #3c3cd1;
+  font-size: 2rem;
 }/*# sourceMappingURL=style.css.map */
